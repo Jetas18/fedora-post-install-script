@@ -16,7 +16,7 @@ sudo dnf install -y gcc-c++ make cmake automake autoconf libtool pkg-config \
 libpng-devel libjpeg-devel libtiff-devel zlib-devel libwebp-devel \
 libjpeg-turbo-devel libicu-devel libxml2-devel gettext-devel libcurl-devel \
 openssl-devel readline-devel ncurses-devel sqlite-devel libuuid-devel wget curl htop vim
-sudo dnf install snapd || exit 1
+sudo dnf -y install snapd || exit 1
 sudo ln -s /var/lib/snapd/snap /snap
 reboot
 
