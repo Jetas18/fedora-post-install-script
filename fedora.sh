@@ -4,7 +4,7 @@ sudo sh -c echo fastestmirror=True >> /etc/dnf/dnf.conf
 sudo sh -c echo max_parallel_downloads=5 >> /etc/dnf/dnf.conf
 sudo sh -c echo default=True >> /etc/dnf/dnf.conf
 sudo sh -c echo keepcache=Faslse >> /etc/dnf/dnf.conf
-sleep 3
+sleep 10
 sudo dnf update
 sleep 5
 sudo dnf upgrade
