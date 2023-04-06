@@ -23,6 +23,9 @@ sudo dnf install -y gcc-c++ make cmake automake autoconf libtool pkg-config \
   openssl-devel readline-devel ncurses-devel sqlite-devel libuuid-devel
 sleep 10
 sudo dnf install -y wget curl htop vim
+sudo dnf install snapd
+sudo ln -s /var/lib/snapd/snap /snap
+sudo snap install snap-store
 git clone --recursive https://github.com/andresgongora/synth-shell.git
 chmod +x synth-shell/setup.sh
 cd synth-shell
