@@ -6,11 +6,17 @@ create a file with the .desktop extention
 
 
 [Desktop Entry]
+
 Version=1.0
+
 Type=Application
+
 Name=instalPost
+
 Exec=sudo /home/name_of_user/fedora-post-install-script/fedora.sh
+
 Terminal=true
+
 Categories=Utility;
 
 
