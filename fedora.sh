@@ -2,11 +2,11 @@
 cat << EOF | sudo tee -a /etc/dnf/dnf.conf
 fastestmirror=True
 max_parallel_downloads=5
-default=True
+defaultyes=True
 keepcache=True
 EOF
 read -p "press enter to continue with the setup"
-sudo dnf update && sudo dnf upgrade || exit 1
+sudo dnf -y update && sudo -y dnf upgrade || exit 1
 sudo dnf -y install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm || exit 1
 sudo dnf groupupdate core || exit 1
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo ||exit 1
