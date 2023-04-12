@@ -12,7 +12,6 @@ sudo dnf groupupdate core || exit 1
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo ||exit 1
 sudo dnf groupupdate multimedia --setop="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin || exit 1
 sudo dnf groupupdate sound-and-video || exit 1
-sudo dnf install ./slack-4.18.0-0.1.fc21.x86_64.rpm
 sudo dnf config-manager --add-repo=https://repo.skype.com/data/skype-stable.repo
 sudo dnf install skypeforlinux
 sudo dnf install -y gcc-c++ make cmake automake autoconf libtool pkg-config \
